@@ -1,33 +1,36 @@
 import java.util.Scanner;
 
-public class Grade_Average_Calculation {
+public class GradeAverageCalculation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
         // Get grades from the user
-        System.out.println("Enter Mathematics grade: ");
-        double Math = input.nextDouble(); // Use 'input' here instead of 'scanner'
+        System.out.print("Enter your Mathematics grade: ");
+        double math = input.nextDouble();
 
-        System.out.println("Enter the Physics grade: ");
-        double Physics = input.nextDouble(); // Use 'input' here instead of 'scanner'
+        System.out.print("Enter your Physics grade: ");
+        double physics = input.nextDouble();
 
-        System.out.println("Enter the Chemistry grade:");
-        double Chemistry = input.nextDouble(); // Use 'input' here instead of 'scanner'
+        System.out.print("Enter your Chemistry grade: ");
+        double chemistry = input.nextDouble();
 
-        System.out.println("Enter the Biology grade:");
-        double Biology = input.nextDouble(); // Use 'input' here instead of 'scanner'
+        System.out.print("Enter your Biology grade: ");
+        double biology = input.nextDouble();
 
-        System.out.println("Enter the Computer Science grade:");
-        double Computer_Science = input.nextDouble(); // Use 'input' here instead of 'scanner'
+        System.out.print("Enter your Computer Science grade: ");
+        double computerScience = input.nextDouble();
 
         // Calculate the average
-        double average = (Math + Physics + Chemistry + Biology + Computer_Science) / 5;
+        double average = (math + physics + chemistry + biology + computerScience) / 5;
 
-        // Use the ternary operator for conditional check
-        String result = (average >= 60) ? "Passed" : "Failed";
+        // Determine result
+        String result = (average >= 60) ? "Passed 🎉" : "Failed ❌";
 
         // Print the result
-        System.out.println("Average: " + average);
-        System.out.println("Result: " + result);
+        System.out.println("\nYour average is: " + average);
+        System.out.println("Final Result: " + result);
+
+        // Close scanner
+        input.close();
     }
 }
